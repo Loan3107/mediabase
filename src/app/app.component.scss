@@ -1,0 +1,16 @@
+@import "../styles.scss";
+
+.app {
+    &__layout {
+        color: $primary;
+        min-height: 100% !important;
+
+        &__content {
+            background-color: $white;
+        }
+
+        &__header {
+            background-color: $white;
+        }
+    }
+}
