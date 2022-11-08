@@ -1,0 +1,29 @@
+<div class="movie-details" *ngIf="details !== undefined; else loading">
+    <div nz-row [nzGutter]="12">
+        <div class="movie-details__overview" nz-col nzXs="24" nzMd="16">
+            <p>{{ details.overview }}</p>
+        </div>
+
+        <div class="movie-details__infos" nz-col nzXs="24" nzMd="8">
+             <p class="movie-details__infos__casts">
+                <b class="movie-details__infos__casts__title">Distribution : </b>
+                <span *ngFor="let actor of details.credits.cast | slice:0:3; let isLast=last">
+                    {{ actor.name }}{{ isLast ? ' ...' : ', ' }}
+                </span>
+             </p>
+             
+             <p class="movie-details__infos__genres">
+                <b  class="movie-details__infos__genres__title">Genres : </b>
+                <span *ngFor="let genre of details.genres; let isLast=last">
+                    {{ genre.name }}{{ isLast ? '' : ', ' }}
+                </span>
+             </p>
+        </div>
+    </div>
+</div>
+
+<ng-template #loading>
+    <nz-spin nzTip="Chargement...">
+        <nz-alert nzType="info"></nz-alert>
+    </nz-spin>
+</ng-template>

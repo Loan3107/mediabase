@@ -1,0 +1,17 @@
+@import "../../../../styles.scss";
+
+.movie-details {
+    &__infos {
+        &__casts {
+            &__title {
+                color: $secondary;
+            }
+        }
+
+        &__genres {
+            &__title {
+                color: $secondary;
+            }
+        }
+    }
+}

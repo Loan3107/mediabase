@@ -1,0 +1,13 @@
+<div class="home">
+    <app-now-playing (onClickEvent)="openModal($event)"></app-now-playing>
+    <app-movie-list (onClickEvent)="openModal($event)"></app-movie-list>
+</div>
+
+<nz-modal
+    [nzFooter]="null"
+    (nzOnCancel)="cancelModal()"
+    [(nzVisible)]="isOpenedModal">
+    <ng-container *nzModalContent>
+        <app-movie-details [details]="details"></app-movie-details>
+    </ng-container>
+</nz-modal>

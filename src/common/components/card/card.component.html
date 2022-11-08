@@ -1,0 +1,6 @@
+<nz-card class="shared__components__card" [nzCover]="coverTemplate" (click)="onClick(movie.id)" clickable>
+    <nz-card-meta nzTitle="{{ movie.title }}"></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+    <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="">
+</ng-template>

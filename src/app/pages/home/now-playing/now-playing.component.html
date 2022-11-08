@@ -1,0 +1,16 @@
+<div class="now-playing">
+    <h2 class="now-playing__title">Derniers films en date</h2>
+    <div nz-row>
+        <div class="scrolling-wrapper">
+            <div
+                *ngFor="let movie of nowPlaying"
+                nz-col
+                nzXs="12"
+                nzSm="12"
+                nzMd="8"
+                nzLg="4">
+                <app-card [movie]="movie" (onClickEvent)="onClick(movie.id)"></app-card>
+            </div>
+        </div>
+    </div>
+</div>

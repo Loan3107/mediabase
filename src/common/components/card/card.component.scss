@@ -1,0 +1,16 @@
+.shared {
+    &__components {
+        &__card {
+            border-radius: 10px;
+            cursor: pointer;
+            flex: 0 0 auto;
+            margin: 15px 0 10px 15px;
+            overflow: hidden;
+            transition: transform .2s;
+            
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
