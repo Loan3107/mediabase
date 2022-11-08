@@ -1,0 +1,12 @@
+<div class="movie-list">
+    <h2 class="movie-list__title">Des suggestions pour passer une bonne soirée</h2>
+    <div nz-row>
+        <div
+            *ngFor="let movie of movieList"
+            nz-col
+            nzXs="12"
+            nzLg="6">
+            <app-card [movie]="movie" (onClickEvent)="onClick(movie.id)"></app-card>
+        </div>
+    </div>
+</div>
