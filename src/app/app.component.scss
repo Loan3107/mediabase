@@ -11,6 +11,10 @@
 
         &__header {
             background-color: $white;
+            
+            h1 {
+                color: $secondary;
+            }
         }
     }
 }
