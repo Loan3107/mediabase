@@ -1,0 +1,17 @@
+@import "../../../../styles.scss";
+
+.now-playing {
+    background-color: $grey;
+    padding: 20px 0 20px 35px;
+
+    .scrolling-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+
+    &__title {
+        color: $secondary;
+        margin-left: 15px;
+    }
+}
